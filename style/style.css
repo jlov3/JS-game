@@ -1,0 +1,21 @@
+body {
+  background-color: coral;
+}
+
+#buttons {
+  width: fit-content;
+  margin: auto;
+  height: fit-content;
+}
+#buttons button {
+  height: 300px;
+  margin: 0;
+  top: 0;
+}
+#buttons button:hover {
+  background-color: darkslategray;
+  cursor: pointer;
+}
+#buttons img {
+  width: 300px;
+}
