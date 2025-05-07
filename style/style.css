@@ -1,6 +1,4 @@
-body {
-  background-color: coral;
-}
+body {background-color: coral;}
 
 #buttons {
   width: fit-content;
@@ -9,13 +7,20 @@ body {
 }
 #buttons button {
   height: 300px;
-  margin: 0;
-  top: 0;
+  background-color: #efefef;
+  border: 4px solid black;
 }
 #buttons button:hover {
   background-color: darkslategray;
   cursor: pointer;
+  border: 4px solid grey;
 }
-#buttons img {
-  width: 300px;
-}
+#buttons img {width: 300px;}
+
+.played:hover {background-color: #efefef!important;}
+.done:hover {border: 4px solid black!important;}
+.userGuess {background-color: lightgreen!important;}
+.compGuess {background-color: yellow!important;}
+.tie {background-color: red!important;}
+
+#replay {display: none;}
