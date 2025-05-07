@@ -1,6 +1,6 @@
+let userGuess = document.getElementById("userGuess");
+let compGuess = document.getElementById("compGuess");
 let result = document.getElementById("result");
-let user = document.getElementById("userGuess");
-let com = document.getElementById("compGuess");
 let rock = document.getElementById("rock");
 let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
@@ -17,20 +17,20 @@ function shoot(hand) {
     comp = "scissors";
   }
 
-  user.innerText = hand;
-  com.innerText = comp;
+  userGuess.innerText = hand;
+  compGuess.innerText = comp;
 
-  let uGuess = document.getElementById(hand);
-  let cGuess = document.getElementById(comp);
+  let uShot = document.getElementById(hand);
+  let cShot = document.getElementById(comp);
   if(hand!=comp) {
-    uGuess.classList.add("userGuess");
-    cGuess.classList.add("compGuess");
+    uShot.classList.add("uShot");
+    cShot.classList.add("cShot");
   }
 
   if(hand == comp) {
     result.innerText = "User ties with Computer. Nobody wins.";
-    uGuess.classList.add("tie");
-    cGuess.classList.add("tie");
+    uShot.classList.add("tie");
+    cShot.classList.add("tie");
   } else if(hand == 'rock') {
     if(comp == 'scissors') {
       result.innerText = "User beats Computer with rock.";
@@ -66,23 +66,25 @@ function shoot(hand) {
 
 function replay() {
   rply.style.display = "none";
+  /* works in console but not here?
+  userGuess.innerText = ""; */
 
   for (i=0; i<list.length; i++) {
     let lItem = document.getElementById(list[i]);
     lItem.onclick = shoot;
-    /*nobody else would give this straight answer for some reason...?
-    https://stackoverflow.com/a/23412811*/
+    /* nobody else would give this straight answer for some reason...?
+    https://stackoverflow.com/a/23412811 */
     lItem.setAttribute("onclick", "shoot('" + list[i] + "')");
     lItem.style.cursor = "pointer";
     lItem.classList.remove("done");
-    if(list[i]!=user.innerText && list[i]!=com.innerText) {
+    if(list[i]!=userGuess.innerText && list[i]!=compGuess.innerText) {
       lItem.classList.remove("played");
-    } else if (user.innerText ===  com.innerText) {
+    } else if (userGuess.innerText ===  compGuess.innerText) {
       lItem.classList.remove("tie");
-    } else if (list[i] === user.innerText) {
-      lItem.classList.remove("userGuess");
+    } else if (list[i] === userGuess.innerText) {
+      lItem.classList.remove("uShot");
     } else {
-      lItem.classList.remove("compGuess");
+      lItem.classList.remove("cShot");
     }
   }
 }

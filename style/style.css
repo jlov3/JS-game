@@ -1,14 +1,32 @@
-body {background-color: coral;}
+body {background-color: #d7bfa5;}
+
+h1 {
+  width: fit-content;
+  margin: auto;
+  margin-top: 1.5em;
+  font-family: Major Mono Display, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-bottom: 4px solid black;
+  padding-bottom: 4px;
+}
+
+#game {
+  bottom: 0;
+}
 
 #buttons {
   width: fit-content;
   margin: auto;
+  margin-top: 2em;
   height: fit-content;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 6em;
 }
 #buttons button {
   height: 300px;
   background-color: #efefef;
   border: 4px solid black;
+  border-radius: 4rem;
 }
 #buttons button:hover {
   background-color: darkslategray;
@@ -17,10 +35,39 @@ body {background-color: coral;}
 }
 #buttons img {width: 300px;}
 
+#stats {
+  width: fit-content;
+  margin: auto;
+  margin-top: 4em;
+  font-size: larger;
+  font-family: Verdana, Arial, sans-serif;
+  line-height: 2.5;
+}
+
 .played:hover {background-color: #efefef!important;}
 .done:hover {border: 4px solid black!important;}
-.userGuess {background-color: lightgreen!important;}
-.compGuess {background-color: yellow!important;}
-.tie {background-color: red!important;}
+.uShot {background-color: #a3e2a3!important;}
+.cShot {background-color: #fcfc89!important;}
+.tie {background-color: #d55f5f!important;}
+/* editing text breaks JS for some reason????
+tried:
+- CSS text-transform
+- adding CSS text-transform through JS
+- uppercase HTML inputs & strings in JS
+- resetting #stats strings to "" after clicking play again
+?????
+#userGuess, #compGuess {text-transform: uppercase;} */
 
-#replay {display: none;}
+#replay {
+  display: none;
+  margin: auto;
+  height: 5rem;
+  width: 14rem;
+  font-size: x-large;
+  background-color: #deb3fd;
+  border: 2px solid black;
+}
+#replay:hover {
+  background-color: #e3d5f1;
+  border: 2px solid gray;
+}
