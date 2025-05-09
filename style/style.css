@@ -3,14 +3,14 @@ body {background-color: #d7bfa5;}
 h1 {
   width: fit-content;
   margin: auto;
-  margin-top: 1.5em;
+  margin-top: 0.6em;
   font-family: Major Mono Display, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   border-bottom: 4px solid black;
   padding-bottom: 4px;
 }
 
 #game {
-  bottom: 0;
+  margin-bottom: 1em;
 }
 
 #buttons {
@@ -23,10 +23,10 @@ h1 {
   column-gap: 6em;
 }
 #buttons button {
-  height: 300px;
   background-color: #efefef;
   border: 4px solid black;
   border-radius: 4rem;
+  padding: 15px;
 }
 #buttons button:hover {
   background-color: darkslategray;
