@@ -71,3 +71,22 @@ tried:
   background-color: #e3d5f1;
   border: 2px solid gray;
 }
+
+#credsC {
+  width: 100%;
+  margin-bottom: 0;
+}
+#credsB {
+  width: 100%;
+  border: 2px solid black;
+}
+#creds {
+  display: none;
+  background-color: #675543;
+  color: #faf5eb;
+  padding: 1em;
+  border: 2px solid black;
+  margin-top: -2px;
+}
+#creds a {color: #fff;}
+#creds a:visited {color: #ccc1c1;}

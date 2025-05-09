@@ -88,3 +88,12 @@ function replay() {
     }
   }
 }
+
+function credits() {
+  let creds = document.getElementById("creds");
+  if (creds.style.display == "block") {
+    creds.style.display = "none";
+  } else {
+    creds.style.display = "block";
+  }
+}
